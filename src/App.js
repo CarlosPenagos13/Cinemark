@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import Redes from "./components/redes/redes";
+import Iconos from "./components/iconos/iconos";
+import logo_cinemark from "./images/logo_cinemark.png";
+import {
+  GeneralContainer,
+  Title,
+  LogoContainer,
+  LogoContainerImg,
+  Text,
+} from "./Styled";
+import BtnsShare from "./components/btns_share/btns_share";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GeneralContainer>
+      <BtnsShare />
+      <Title>Cinemark Ecuador</Title>
+      <LogoContainer>
+        <LogoContainerImg alt="Logo de Cinemark" src={logo_cinemark} />
+      </LogoContainer>
+      <Text>
+        Revisa nuestra programación, experimenta la mejor tecnología y vive una
+        <br />
+        experiencia sin igual en Cinemark Ecuador
+      </Text>
+      <Iconos />
+      <Redes />
+    </GeneralContainer>
   );
 }
 
